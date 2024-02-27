@@ -1,0 +1,16 @@
+makeblastdb -in mystery_transcripts.fasta -out transcript -dbtype nucl
+makeblastdb -in mystery_proteins.fasta -out protein -dbtype prot
+blastn -db nucl -query mystery_nucleotide_query.fasta -evalue 1e-3 -num_alignments 5 -outfmt 7 -out search_results.txt
+mystery_nucleotide_query	T010027234997	91.965	1481	115	4	1	1479	197	1675	0.0	2073
+mystery_nucleotide_query	T010003453160	91.351	1480	126	2	1	1479	193	1671	0.0	2023
+mystery_nucleotide_query	T010027234995	91.351	1480	126	2	1	1479	193	1671	0.0	2023
+awk '$3 > 90' search_results.txt > most_similar.txt
+blastp -db prot -query mystery_protein_query.fasta -evalue 1e-5 -num_alignments 15 -outfmt 7 -out search_protein_results.txt
+mystery_protein_query	P010027090796	87.805	492	60	0	1	492	1	492	0.0	914
+mystery_protein_query	P010027090798	87.398	492	62	0	1	492	1	492	0.0	912
+mystery_protein_query	P010027073865	84.756	492	75	0	1	492	1	492	0.0	899
+mystery_protein_query	P010027077695	84.553	492	76	0	1	492	1	492	0.0	897
+
+echo 8. Coffea arabica
+echo 9. Gardenia jasminodes
+echo 10. Putalive catalase 
