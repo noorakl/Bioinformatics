@@ -1,7 +1,7 @@
 
 #!/bin/bash
 greeting='This script can count the number of sequences in a fasta file.'
-echo $greeting
+
 
 name='Its Noor'
 Echo $greeting, $name
