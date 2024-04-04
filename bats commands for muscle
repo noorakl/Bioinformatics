@@ -1,0 +1,9 @@
+
+3. Using CIPRES what would the command line text of the above commands be if we were to run this in a terminal?
+muscle -in infile.fasta -seqtype protein -maxiters 16 -maxmb 30000000 -hydro 5 -hydrofactor 1.2 -log logfile.txt -weight1 clustalw -distance1 kmer6_6 -cluster1 upgmb -sueff 0.1 -root1 pseudo -maxtrees 1 -weight2 clustalw -distance2 pctidkimura -cluster2 upgmb -sueff 0.1 -root2 pseudo -objscore sp -noanchors -fastaout out_of_the_bats_fasta_put.fasta
+
+4. Sequences from which species is/are most closely related to that of the "Flying Fox"?
+Rousettus leschenaultii, Cynopterus sphinx, Syconycteris australis, Dobsonia viridis, Epomophorus wahlbergi. 
+
+5. Why might such a phylogeny be useful in light of current event
+Because phylogenic trees can help to provide insight on evolution of some species and phylogeny can help us to classify organisms based on their ancestral connections. 
