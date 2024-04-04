@@ -1,0 +1,15 @@
+
+#!/bin/bash
+greeting='This script can count the number of sequences in a fasta file.'
+echo $greeting
+
+name='Its Noor'
+Echo $greeting, $name
+
+mkdir /Users/noorakl/Desktop/bioinformatics
+cd /Desktop/bioinformatics
+mkdir learning_bash
+mv  /Users/noorakl/Desktop/transcriptome1.fasta /Users/noorakl/Desktop/bioinformatics/learning_bash 
+
+cd /Users/noorakl/Desktop/bioinformatics/learning_bash
+grep -c ">" transcriptome1.fasta > fasta_count.txt
