@@ -1,0 +1,11 @@
+cd desktop
+sed '/[Zz][Oo][Oo]/d' pandas.tsv > pandas_zoos.txt
+awk '{print $1,$3,$2}' pandas_zoos.txt |sort -k 3 > sorted_pandas.txt
+awk '{print $5}' pandas.tsv > panda_zoos_a2z.txt | sort -o panda_zoos_a2z.txt
+sed 's/male/M/' sorted_pandas.txt > panda_m_f.txt | sed 's/feM/F/' panda_m_f.txt> panda_m_f.txt
+grep -h "October" pandas.tsv | grep -c "female"
+nl -bt pandas.tsv > panda_names.txt
+sed -n -e 2p -e 6p -e 17p panda_names.txt > lines_1_6_17.txt
+grep -i "x" panda_names.txt > x_lines.txt
+awk '{print $5}' pandas.tsv | sort | uniq > unique_places.txt
+sort -n -k 4 pandas.tsv | awk '$4>=0 && $4<=10' | awk '{print $1,$4}' > young_pandas.txt
