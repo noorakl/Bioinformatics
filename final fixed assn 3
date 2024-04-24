@@ -1,7 +1,7 @@
 cd desktop
 sed '/[Zz][Oo][Oo]/d' pandas.tsv > pandas_zoos.txt
 awk '{print $1,$3,$2}' pandas_zoos.txt |sort -k 3 > sorted_pandas.txt
-awk '{print $5}' pandas.tsv > panda_zoos_a2z.txt | sort -o panda_zoos_a2z.txt
+awk '{print $5}' pandas.tsv | sort -o > panda_zoos_a2z.txt
 sed 's/male/M/' sorted_pandas.txt > panda_m_f.txt | sed 's/feM/F/' panda_m_f.txt> panda_m_f.txt
 grep -h "October" pandas.tsv | grep -c "female"
 nl -bt pandas.tsv > panda_names.txt
