@@ -1,0 +1,2 @@
+raxmlHPC-PTHREADS-AVX -T 12 -n result -s infile.txt -c 25 -p 12345 -m PROTCATDAYHOFF
+Phylogenic trees can help with learning the most common ancestor between multiple species. It also can help us to study genomic data that can track the lineage of certain diseases like SARS- Cov-2. By using a phylogenic tree to track a disease, we can track and study the evolution of that disease, to help identify and name new varients. 
